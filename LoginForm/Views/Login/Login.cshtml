@@ -1,0 +1,119 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE html>   
+<html>   
+<head>  
+<meta name="viewport" content="width=device-width, initial-scale=1">  
+<title> Login Page </title>  
+<style>   
+body, html {
+    height: 100%;
+    font-family: Raleway-Regular, sans-serif;
+}
+Body {  
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    background-color: white;
+}
+button {   
+    background-color: #4CAF50;   
+    width: 100%;  
+    color: white;   
+    padding: 0 20px;   
+    margin: 10px 0px;   
+    border: none;
+    cursor: pointer; 
+    font-family: Raleway-Bold;
+    font-size: 16px;
+    line-height: 1.2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 150px;
+    height: 55px;
+    background-color: #333333;
+    border-radius: 27px;
+    transition: all 0.4s;
+}   
+form {     
+    width: auto;
+    height: -webkit-fill-available;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    background-color: #ebebeb;
+}   
+input[type=text], input[type=password] {   
+    font-family: Raleway-Medium;
+    color: #555555;
+    line-height: 1.2;
+    font-size: 18px;
+    display: block;
+    width: -webkit-fill-available;
+    background: transparent;
+    height: 55px;
+    padding: 0 25px 0 25px;
+    margin-top: 11px;
+    margin-bottom: 36px;
+    position: relative;
+    background-color: white;
+    border: 2px solid #e6e6e6;
+    border-radius: 2px;
+}  
+button:hover {   
+    opacity: 0.7;   
+}           
+
+label {
+    font-family: Raleway-SemiBold;
+    font-size: 13px;
+    color: #555555;
+    line-height: 1.4;
+    text-transform: uppercase;
+    padding-bottom: 11px;
+}
+
+.container {   
+    padding: 25px;   
+    width: 560px;
+    background: white;
+    border-radius: 10px;
+    position: relative;
+    padding-right: 85px;
+    padding-left: 85px;
+    padding-top: 55px;
+    padding-bottom: 55px;
+}
+
+.title {
+    font-family: Raleway-Medium;
+    font-size: 30px;
+    color: #555555;
+    line-height: 1.2;
+    text-transform: uppercase;
+    text-align: left;
+    width: 100%;
+    display: block;
+    padding-bottom: 32px;
+}
+</style>   
+</head>    
+<body>    
+    <form action="/Login/Auth" method="post">  
+        <div class="container">   
+            <span class="title">Login Form</span>
+            <label>Login : </label>   
+            <input type="text" name="login" required>  
+            <label>Password : </label>   
+            <input type="password" name="password" required>  
+            <button type="submit">Login</button>      
+        </div>   
+    </form>     
+</body>     
+</html>  

@@ -1,0 +1,18 @@
+﻿@model LoginForm.Models.UsersModel
+
+@if (@Model.IsLogged) 
+{ 
+    @if (@Model.IsAdmin)
+    {
+        <div title="ok, and?">You are a true admin!</div>
+    }
+    else
+    {
+        <div title="Thank God you are not">You are not an admin :(</div>
+    }
+}
+else
+{
+    <p>You aren't logged in, which is sad. Either there is no such user or the password is wrong. Think twice and try again with the link below.</p>
+    <a href="@Url.Action("Index", "Login")" class="elements"><span>Login</span></a>
+}
