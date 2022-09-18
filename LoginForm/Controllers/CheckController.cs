@@ -1,6 +1,5 @@
 ﻿using LoginForm.Models;
 using Microsoft.AspNetCore.Mvc;
-using System;
 
 namespace LoginForm.Controllers
 {

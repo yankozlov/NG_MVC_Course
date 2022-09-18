@@ -11,9 +11,6 @@ namespace LoginForm.Controllers
         }
         public IActionResult Auth(UsersModel model)
         {
-            model.Login = this.Request.Form["login"];
-            model.Password = this.Request.Form["password"];
-            model.IsLogged = false;
             foreach (var record in UsersData.Data)
             {
                 if (record.Login == model.Login && record.Password == model.Password)
