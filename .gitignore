@@ -18,9 +18,9 @@ UpgradeLog.XML
 _UpgradeReport_Files/
 
 # -> Directories
-bin/
-obj/
-TestResults/
+*/bin/
+*/obj/
+*/TestResults/
 
 # -> Web publish log
 *.Publish.xml

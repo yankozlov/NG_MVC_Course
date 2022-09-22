@@ -5,13 +5,13 @@ namespace LoginForm.Controllers
 {
     public class CheckController : Controller
     {
-        public IActionResult Index()
+        public IActionResult Index(UsersModel model)
         {
-            var model = TempData.Get<UsersModel>("model");
-            if (model is null)
+            if (model.Login == null || model.Password == null)
             {
                 return RedirectToAction("Index", "Login");
             }
+            model = UsersData.Auth(model);
             return View("Check", model);
         }
     }
